@@ -57,7 +57,7 @@ public class PaymentCardForm: PaymentForm {
             }
             let parent = self.presentingViewController
             self.dismiss(animated: true) {
-                if let parent = parent {
+                if let parent = parent as? PaymentOptionsForm {
                     PaymentForm.present(with: self.configuration, from: parent)
                 }
             }
