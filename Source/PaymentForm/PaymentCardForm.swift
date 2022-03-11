@@ -21,7 +21,7 @@ public class PaymentCardForm: PaymentForm {
     @IBOutlet private weak var cardTypeIcon: UIImageView!
     @IBOutlet private weak var helperSafeAreaBottomView: UIView!
     
-    var onPayClicked: ((_ cryptogram: String, _ email: String?) -> ())?
+    public var onPayClicked: ((_ cryptogram: String, _ email: String?) -> ())?
     
     @discardableResult
     public class func present(with configuration: PaymentConfiguration, from: UIViewController, completion: (() -> ())?) -> PaymentForm? {

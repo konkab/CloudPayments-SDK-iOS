@@ -100,7 +100,7 @@ public class PaymentForm: BaseViewController {
         self.containerView.layer.mask = mask
     }
     
-    internal func charge(cardCryptogramPacket: String, email: String?, completion: PaymentCallback?) {
+    public func charge(cardCryptogramPacket: String, email: String?, completion: PaymentCallback?) {
         print("CHARGE")
         network.charge(cardCryptogramPacket: cardCryptogramPacket,
                        email: email,
@@ -113,7 +113,7 @@ public class PaymentForm: BaseViewController {
         }
     }
     
-    internal func auth(cardCryptogramPacket: String, email: String?, completion: PaymentCallback?) {
+    public func auth(cardCryptogramPacket: String, email: String?, completion: PaymentCallback?) {
         print("AUTH")
         network.auth(cardCryptogramPacket: cardCryptogramPacket,
                      email: email,
@@ -127,7 +127,7 @@ public class PaymentForm: BaseViewController {
     }
     
     // Проверяем необходимо ли подтверждение с использованием 3DS
-    internal func checkTransactionResponse(transactionResponse: TransactionResponse, completion: PaymentCallback?) {
+    public func checkTransactionResponse(transactionResponse: TransactionResponse, completion: PaymentCallback?) {
         self.threeDsCompletion = nil
         self.transaction = nil
         
