@@ -21,7 +21,7 @@ let package = Package(
             name: "CloudPayments",
             path: "Source",
             resources: [
-                .process("../Resources")
+                .process("Resources")
             ]),
     ]
 )
